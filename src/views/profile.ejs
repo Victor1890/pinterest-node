@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("partials/head")%>
+    <title>Pinterest <%= image.title %></title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">To back</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="card animated fadeInDown">
+                    <img class="card-img-top" src="<%= image.path %>" alt="<%= image.title %>">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= image.title %></h5>
+                        <p class="card-text"><%= image.description %></p>
+                        <p class="card-text"><%= image.created_at %></p>
+                        <a href="/image/delete/<%= image._id %>" class="btn btn-danger btn-block">
+                            Delete Image
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

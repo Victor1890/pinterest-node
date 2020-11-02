@@ -1,0 +1,41 @@
+{
+  "name": "pinterest-node",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Victor1890/pinterest-node.git"
+  },
+  "keywords": [
+    "node",
+    "pinterest",
+    "mongodb",
+    "db",
+    "js",
+    "express"
+  ],
+  "author": "Victor Rosario <victorrosariodeveloper@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Victor1890/pinterest-node/issues"
+  },
+  "homepage": "https://github.com/Victor1890/pinterest-node#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "fs-extra": "^9.0.1",
+    "mongoose": "^5.10.11",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "timeago.js": "^4.0.2",
+    "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

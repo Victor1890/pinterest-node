@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("partials/head")%>
+    <%- include("partials/nav")%>
+    <title>Pinterest Node</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="card-columns">
+                <% images.forEach(function (image) {%>
+                    <div class="card animated fadeInDown">
+                        <img class="card-img-top" src="<%= image.path %>" alt="<%= image.title %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= image.title %></h5>
+                            <p class="card-text"><%= image.description %></p>
+                            <p class="card-text"><%= image.created_at %></p>
+                            <a href="/image/<%= image._id %>" class="btn btn-primary">
+                                View profile
+                            </a>
+                        </div>
+                    </div>
+                <%})%>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
